@@ -1,0 +1,309 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+/* Theme Variations */
+body.dark-theme {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+body.light-theme {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    transition: all 0.3s ease;
+}
+
+.dark-theme .container {
+    background: #34495e;
+    color: white;
+}
+
+.light-theme .container {
+    background: #ffffff;
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#greeting {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    transition: opacity 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#changeTextBtn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: Verdana, sans-serif;
+}
+
+#changeTextBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+#changeTextBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Controls Sections */
+.controls-section {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.controls-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.dark-theme .controls-section {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .controls-section h3 {
+    color: #bbb;
+}
+
+/* Theme Buttons */
+.theme-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.theme-btn {
+    padding: 8px 15px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+
+.theme-btn:hover {
+    transform: translateY(-1px);
+}
+
+.theme-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.dark-theme .theme-btn {
+    background: #2c3e50;
+    color: white;
+    border-color: #555;
+}
+
+/* Animation Select */
+#animationSelect {
+    padding: 8px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.dark-theme #animationSelect {
+    background: #2c3e50;
+    color: white;
+    border-color: #555;
+}
+
+/* Custom Message Input */
+#customMessageInput {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 1em;
+    width: 200px;
+}
+
+.dark-theme #customMessageInput {
+    background: #2c3e50;
+    color: white;
+    border-color: #555;
+}
+
+#addMessageBtn {
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+#addMessageBtn:hover {
+    background: #218838;
+    transform: translateY(-1px);
+}
+
+/* Main Controls */
+.main-controls {
+    margin: 25px 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#autoCycleBtn {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#autoCycleBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#autoCycleBtn.active {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+}
+
+/* Sound Toggle */
+#soundToggleBtn {
+    background: #17a2b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+#soundToggleBtn:hover {
+    background: #138496;
+    transform: translateY(-1px);
+}
+
+#soundToggleBtn.muted {
+    background: #6c757d;
+}
+
+/* Statistics */
+.stats-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+
+.stats-section p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.dark-theme .stats-section {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .stats-section p {
+    color: #bbb;
+}
+
+/* Animation Classes */
+.slide-animation {
+    animation: slideIn 0.5s ease-out;
+}
+
+.bounce-animation {
+    animation: bounceIn 0.6s ease-out;
+}
+
+.zoom-animation {
+    animation: zoomIn 0.4s ease-out;
+}
+
+.fade-animation {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    #customMessageInput {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+    
+    .main-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
